@@ -1,5 +1,5 @@
 {
-    "name": "yaquawa/laravel-passport-binary-uuid-adapter",
+    "name": "nolanpro/laravel-passport-binary-uuid-adapter",
     "description": "This package enables Laravel Passport to utilize binary UUID.",
     "keywords": [
         "verification",
