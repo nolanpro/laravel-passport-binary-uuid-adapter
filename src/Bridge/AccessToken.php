@@ -9,11 +9,17 @@ class AccessToken extends BaseAccessToken
 {
     public function setUserIdentifier($identifier)
     {
-        parent::setUserIdentifier(Helper::encodeUuid($identifier));
+        if ($identifier) {
+            $identifier = Helper::encodeUuid($identifier);
+        }
+        parent::setUserIdentifier($identifier);
     }
 
     public function getUserIdentifier()
     {
-        return Helper::decodeUuid($this->userIdentifier);
+        if ($this->userIdentifier) {
+            return Helper::decodeUuid($this->userIdentifier);
+        }
+        return $this->userIdentifier;
     }
 }
